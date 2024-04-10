@@ -1,0 +1,179 @@
+:root {
+    --bg--cabezera: #fff;
+    --bg--select: #0000007a;
+    --bg--cuerpo--uno: #ce0000;
+    --bg--cuerpo--dos: #8a0000;
+    --color--cabezera: #000;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(180deg, var(--bg--cuerpo--uno) 18%, var(--bg--cuerpo--dos) 100%);
+}
+
+header {
+    width: 100%;
+    height: 12vh;
+    background-color: #00000000; /* Color de fondo transparente */
+    transition: height 0.5s cubic-bezier(0.4, 0, 1, 1);
+}
+
+
+header.active {
+    position: fixed;
+    height: 12vh;
+    background-color: var(--bg--cabezera); /* Cambia el color de fondo cuando está activo */
+}
+
+.logo {
+    width: 0;
+}
+
+.logo img {
+
+    width: 100%;
+}
+
+.logo.active{
+    width: 8%;
+}
+
+.select i {
+    font-size: 1.5rem;
+    color: var(--bg--cabezera);
+    z-index: 1;
+}
+
+.select::before {
+    content: '';
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: var(--bg--select);
+}
+
+.select:hover::before {
+    background-color: var(--color--cabezera);
+    border-radius: 50%;
+}
+
+
+
+.links {
+    width: 100%;
+    height: auto;
+   
+}
+
+.cabazera_logo {
+    padding-top: 2rem;
+    width: 100%;
+    color: var(--bg--cabezera);
+}
+
+.content_logo {
+    width: 7.5%;
+    /* background: rgb(255, 255, 255); */
+    background: radial-gradient(circle, #ffffff 50%, #a5a5a5 100%);
+    border-radius: 50%;
+    box-shadow: 0px 17px 13px -8px rgba(255, 255, 255, 0.562);
+}
+
+.logo_cuerpo {
+    width: 100%;
+}
+
+.cabazera_logo h2{
+    margin-top: 2rem;
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+.validado{
+    margin-left: .5rem;
+    width: 1.3rem;
+    height: 1.3rem;
+    background-color: #295FD1;
+    border-radius: 50%;
+}
+
+.cabazera_logo p{
+    width: 30%;
+    font-weight: 600;
+}
+
+.cuerpo_links{
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.content_links{
+    margin-top: 2rem;
+}
+
+.content_links h5{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--bg--cabezera);
+    width: 15%;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.contratos{
+    padding: 0px 1rem 0 1rem;
+    gap: 6rem;
+    width: 30%;
+    height: 6vh;
+    background-color: var(--bg--cabezera);
+    border-radius: 2rem;
+}
+
+.contratos img{
+    width: 15%;
+}
+
+.contratos p{
+    padding: 0;
+    margin: 0;
+    font-weight: 700;
+    color: var(--bg--cuerpo--dos);
+}
+
+.contacto{
+    width: 100%;
+    color: var(--bg--cabezera);
+    margin-top: 2rem;
+}
+
+.contacto .uno{
+    font-size: .7rem;
+    font-weight: 700;
+    margin-top: 1rem;
+}
+
+.contacto .dos{
+    margin-top: 2rem;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.redes i{
+    font-size: 1.7rem;
+    margin-left: 1rem;
+}
+
+.logo_footer{
+    width: 15%;
+}
+
+.logo_footer img{
+    width: 100%;
+}
