@@ -84,7 +84,7 @@ header.active {
     z-index: 1;
 }
 
-.select::before {
+/* .select::before {
     content: '';
     position: absolute;
     width: 2rem;
@@ -96,6 +96,26 @@ header.active {
 .select:hover::before {
     background-color: var(--color--cabezera);
     border-radius: 50%;
+} */
+
+.boton{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: var(--bg--select);
+    border: none;
+}
+
+.boton:hover{
+    background-color: var(--color--cabezera);
+}
+
+.seleccionar{
+    display: none;
+}
+
+.seleccionar.active{
+    display: block;
 }
 
 .links {

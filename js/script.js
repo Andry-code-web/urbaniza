@@ -14,6 +14,15 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+
+    const boton = document.getElementById("boton");
+    const seleccionar = document.getElementById("seleccionar");
+
+    boton.addEventListener("click", ()=>{
+        seleccionar.classList.toggle("active");
+    });
+
+
     const coords = { x: 0, y: 0 };
     const circles = document.querySelectorAll(".circle");
     const colors = [
