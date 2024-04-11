@@ -1,5 +1,6 @@
 :root {
     --bg--cabezera: #fff;
+    --bg--cabezera--hover: #ebebeb;
     --bg--select: #0000007a;
     --bg--cuerpo--uno: #ce0000;
     --bg--cuerpo--dos: #8a0000;
@@ -13,22 +14,51 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     background-image: linear-gradient(180deg, var(--bg--cuerpo--uno) 18%, var(--bg--cuerpo--dos) 100%);
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    height: 1px;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background: rgb(255,0,0);
+    background: -moz-linear-gradient(180deg, rgba(255,0,0,1) 0%, rgba(255,76,125,1) 50%, rgba(255,0,0,1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(255,0,0,1) 0%, rgba(255,76,125,1) 50%, rgba(255,0,0,1) 100%);
+    background: linear-gradient(180deg, rgba(255,0,0,1) 0%, rgba(255,76,125,1) 50%, rgba(255,0,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff0000",endColorstr="#ff0000",GradientType=1);
+}
+
+.circle {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
 header {
     width: 100%;
     height: 12vh;
-    background-color: #00000000; /* Color de fondo transparente */
+    background-color: #00000000;
+    /* Color de fondo transparente */
     transition: height 0.5s cubic-bezier(0.4, 0, 1, 1);
+    justify-content: space-evenly;
 }
-
 
 header.active {
     position: fixed;
     height: 12vh;
-    background-color: var(--bg--cabezera); /* Cambia el color de fondo cuando está activo */
+    background-color: var(--bg--cabezera);
+    /* Cambia el color de fondo cuando está activo */
+    justify-content: space-evenly;
+    z-index: 1;
 }
 
 .logo {
@@ -40,8 +70,12 @@ header.active {
     width: 100%;
 }
 
-.logo.active{
+.logo.active {
     width: 8%;
+}
+
+.select{
+    cursor: pointer;
 }
 
 .select i {
@@ -64,12 +98,10 @@ header.active {
     border-radius: 50%;
 }
 
-
-
 .links {
     width: 100%;
     height: auto;
-   
+
 }
 
 .cabazera_logo {
@@ -90,13 +122,13 @@ header.active {
     width: 100%;
 }
 
-.cabazera_logo h2{
+.cabazera_logo h2 {
     margin-top: 2rem;
     font-size: 1.7rem;
     font-weight: 700;
 }
 
-.validado{
+.validado {
     margin-left: .5rem;
     width: 1.3rem;
     height: 1.3rem;
@@ -104,21 +136,21 @@ header.active {
     border-radius: 50%;
 }
 
-.cabazera_logo p{
+.cabazera_logo p {
     width: 30%;
     font-weight: 600;
 }
 
-.cuerpo_links{
+.cuerpo_links {
     margin-top: 1rem;
     width: 100%;
 }
 
-.content_links{
+.content_links {
     margin-top: 2rem;
 }
 
-.content_links h5{
+.content_links h5 {
     font-size: 1rem;
     font-weight: 500;
     color: var(--bg--cabezera);
@@ -127,53 +159,230 @@ header.active {
     margin-bottom: 1rem;
 }
 
-.contratos{
+.contratos {
     padding: 0px 1rem 0 1rem;
     gap: 6rem;
     width: 30%;
     height: 6vh;
     background-color: var(--bg--cabezera);
     border-radius: 2rem;
+    transition: all .3s;
+    cursor: pointer;
 }
 
-.contratos img{
+.contratos:hover{
+    background-color: var(--bg--cabezera--hover);
+    transform: scale(1.1);
+}
+
+.contratos img {
     width: 15%;
 }
 
-.contratos p{
+.contratos a{
+    text-decoration: none;
+}
+
+.contratos p {
     padding: 0;
     margin: 0;
     font-weight: 700;
     color: var(--bg--cuerpo--dos);
 }
 
-.contacto{
+.contacto {
     width: 100%;
     color: var(--bg--cabezera);
     margin-top: 2rem;
 }
 
-.contacto .uno{
+.contacto .uno {
     font-size: .7rem;
     font-weight: 700;
     margin-top: 1rem;
 }
 
-.contacto .dos{
+.contacto .dos {
     margin-top: 2rem;
     font-size: 1rem;
     font-weight: 700;
 }
 
-.redes i{
+.redes i {
     font-size: 1.7rem;
     margin-left: 1rem;
 }
 
-.logo_footer{
+.logo_footer {
     width: 15%;
 }
 
-.logo_footer img{
+.logo_footer img {
     width: 100%;
+}
+
+
+@media (max-width: 1500px) {
+    .content_links h5 {
+        width: 20%;
+    }
+
+    .contratos {
+        gap: 4rem;
+    }
+
+}
+
+@media (max-width: 1100px) {
+
+    .logo.active {
+        width: 15%;
+    }
+
+    .content_logo {
+        width: 15%;
+    }
+
+    .cabazera_logo h2 {
+        font-size: 2rem;
+    }
+
+    .cabazera_logo p {
+        width: 40%;
+        font-size: 1.2rem;
+    }
+
+    .content_links h5 {
+        font-size: 1.3rem;
+        width: 40%;
+    }
+
+    .contratos {
+        width: 60%;
+        gap: 5.5rem;
+    }
+
+    .contacto p {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-height: 800px) {
+    .contratos {
+        width: 50%;
+        height: 7.5vh;
+    }
+
+    header.active {
+        height: 15vh;
+    }
+
+    .logo.active {
+        width: 10%;
+    }
+
+}
+
+@media (max-width: 760px) {
+    .logo.active {
+        width: 15%;
+    }
+
+    .content_logo {
+        width: 13%;
+    }
+
+    .cabazera_logo p {
+        width: 50%;
+    }
+
+    .content_links h5 {
+        width: 40%;
+        font-size: .95rem;
+    }
+
+    .contratos {
+        gap: 4rem;
+        width: 60%;
+    }
+
+    .contratos p {
+        font-size: .8rem;
+    }
+}
+
+@media (max-width: 550px) {
+    header {
+        justify-content: space-around;
+    }
+
+    header.active {
+        justify-content: space-around;
+    }
+
+    .logo.active {
+        width: 20%;
+    }
+
+    .content_logo {
+        width: 20%;
+    }
+
+    .cabazera_logo h2 {
+        font-size: 1.5rem;
+    }
+
+    .cabazera_logo p {
+        width: 60%;
+        font-size: .9rem;
+    }
+
+    .content_links h5 {
+        width: 50%;
+        font-size: .9rem;
+    }
+
+    .contratos {
+        width: 70%;
+    }
+}
+
+@media (max-width: 450px) {
+    .cabazera_logo h2 {
+        font-size: 1.2rem;
+    }
+
+    .cabazera_logo p {
+        font-size: .75rem;
+    }
+
+    .cuerpo_links {
+        margin-top: 0rem;
+    }
+
+    .content_links h5 {
+        width: 60%;
+        font-size: .85rem;
+    }
+
+    .contratos {
+        width: 90%;
+    }
+
+    .contratos p {
+        font-size: .75rem;
+    }
+
+    .redes {
+        text-align: center;
+        width: 80%;
+    }
+
+    .redes i {
+        font-size: 1.5rem;
+    }
+
+    .logo_footer {
+        width: 35%;
+    }
 }
