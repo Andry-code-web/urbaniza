@@ -274,7 +274,7 @@ header.active {
     }
 
     .contratos {
-        gap: 4rem;
+        gap: 1rem;
     }
 
 }
@@ -305,7 +305,7 @@ header.active {
 
     .contratos {
         width: 60%;
-        gap: 5.5rem;
+        /* gap: 1rem; */
     }
 
     .contacto p {
@@ -348,7 +348,7 @@ header.active {
     }
 
     .contratos {
-        gap: 4rem;
+        gap: 1rem;
         width: 60%;
     }
 
