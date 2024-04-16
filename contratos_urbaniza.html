@@ -16,7 +16,7 @@
     <!-- BOOTSTRAP ICON -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    
+
 
     <title>Centro Inmobiliario</title>
 </head>
@@ -93,35 +93,97 @@
         <!-- CONTENIDO -->
         <div class="cuerpo_links d-flex flex-column justify-content-center mb-5">
 
+            <div class="carta" id="cards">
+                <button id="cloced" class="cerrar">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+                <div class="link_descarga d-flex flex-column align-items-center">
+                    <h3>Comparte este enlace</h3>
+                    <p>VENTA DE INMUEBLE CON EXCLUSIVIDAD ÚNICO PROPIETARIO</p>
+                    <div class="enlace">
+                        <p></p>
+                        <a href="">
+                            <i class="bi bi-copy"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="redes_s">
+                    <div class="redes">
+                        <i class="bi bi-facebook"></i>
+                        <i class="bi bi-instagram"></i>
+                        <i class="bi bi-whatsapp"></i>
+                        <i class="bi bi-tiktok"></i>
+                        <i class="bi bi-globe2"></i>
+                        <i class="bi bi-youtube"></i>
+                        <i class="bi bi-linkedin"></i>
+                        <i class="bi bi-twitter-x"></i>
+                        <i class="bi bi-telephone-fill"></i>
+                        <i class="bi bi-envelope"></i>
+                    </div>
+                </div>
+                <div class="separador"></div>
+                <div class="qr" id="qrCode">
+                    <div class="img_qr"></div>
+                    <div class="descargar_doc">
+                        Descargar documento
+                    </div>
+                </div>
+            </div>
+
             <div class="content_links d-flex flex-column justify-content-center align-items-center">
                 <h5>
                     CONTRATO DE INTERMEDIACIÓN
                 </h5>
                 <div class="contratos d-flex align-items-center">
                     <img src="/img/logo.png" alt="">
-                    <a id="documento" href="/img/CONTRATO DE INTERMEDIACIÓN INMOBILIARIA PARA VENTA DE INMUEBLE CON EXCLUSIVIDAD - ÚNICO PROPIETARIO (2).docx">
+                    <a id="documento"
+                        href="/img/CONTRATO DE INTERMEDIACIÓN INMOBILIARIA PARA VENTA DE INMUEBLE CON EXCLUSIVIDAD - ÚNICO PROPIETARIO (2).docx">
                         <p>VENTA DE INMUEBLE CON EXCLUSIVIDAD ÚNICO PROPIETARIO</p>
                     </a>
-                    <!-- <div class="card_file">
-                        <button class="button">
+                    <div class="card_file">
+                        <button class="button" id="boton_card">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-three-dots" viewBox="0 0 16 16">
                                 <path
                                     d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
                             </svg>
                         </button>
-                        <div class="">
-                            <div class="link_descarga">
-                                <h3>Comparte este enlace</h3>
-                                <p>VENTA DE INMUEBLE CON EXCLUSIVIDAD ÚNICO PROPIETARIO</p>
-                                <div class="enlace"></div>
+                    </div>
+                    <div class="carta" id="cards">
+                        <div class="link_descarga">
+                            <h3>Comparte este enlace</h3>
+                            <p>VENTA DE INMUEBLE CON EXCLUSIVIDAD ÚNICO PROPIETARIO</p>
+                            <div class="enlace">
+                                <p></p>
+                                <a href="">
+                                    <i class="bi bi-copy"></i>
+                                </a>
                             </div>
-                            <div class="redes_s"></div>
-                            <div class="separador"></div>
-                            <div class="qr" id="qrCode"></div>
                         </div>
-                    </div> -->
+                        <div class="redes_s">
+                            <div class="redes">
+                                <i class="bi bi-facebook"></i>
+                                <i class="bi bi-instagram"></i>
+                                <i class="bi bi-whatsapp"></i>
+                                <i class="bi bi-tiktok"></i>
+                                <i class="bi bi-globe2"></i>
+                                <i class="bi bi-youtube"></i>
+                                <i class="bi bi-linkedin"></i>
+                                <i class="bi bi-twitter-x"></i>
+                                <i class="bi bi-telephone-fill"></i>
+                                <i class="bi bi-envelope"></i>
+                            </div>
+                        </div>
+                        <div class="separador"></div>
+                        <div class="qr" id="qrCode">
+                            <div class="img_qr"></div>
+                            <div class="descargar_doc">
+                                Descargar documento
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="contratos d-flex align-items-center mt-3">
                     <img src="/img/logo.png" alt="">
                     <a href="https://www.vivehg.com/contratosvivehg/">
@@ -747,23 +809,21 @@
     <!-- SCRIPTS -->
     <script src="/js/script.js"></script>
     <script src="/js/loader.js"></script>
-    <!-- BIBLIOTECA QR -->
-    <!-- <script src="/js/qrcode.min.js"></script>
     <script>
-        // Obtener el enlace del documento
-        var documentoLink = document.getElementById('documento').href;
-        
-        // Crear instancia de QRCode
-        var qrCode = new QRCode(document.getElementById('qrCode'), {
-            text: documentoLink,
-            width: 200,
-            height: 200,
-            colorDark : "#000000",
-            colorLight : "#ffffff",
-            correctLevel : QRCode.CorrectLevel.H
-        });
-    </script> -->
-    
+        document.addEventListener("DOMContentLoaded", () => {
+            const tarjeta = document.getElementById('cards');
+            const btn_card = document.getElementById('boton_card');
+            const btn_cerrar = document.getElementById('cloced');
+
+            btn_card.addEventListener("click", () => {
+                tarjeta.classList.add('active')
+            })
+            btn_cerrar.addEventListener("click", () => {
+                tarjeta.classList.remove('active')
+            })
+        })
+    </script>
+
 
 </body>
 

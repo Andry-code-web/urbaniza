@@ -118,6 +118,52 @@ header.active {
     border: none;
 }
 
+.carta{
+    display: none;
+}
+
+.carta.active{
+    max-width: 340px;
+    height: 550px;
+    background: var(--bg--cabezera);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    z-index: 1;
+    padding: 2.5rem 1rem 1rem 1.5rem;
+}
+
+.cerrar{
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.cerrar i{
+    font-size: 1.1rem;
+}
+
+.link_descarga{
+    width: 100%;
+}
+
+.link_descarga h3{
+    width: 50%;
+    font-size: 1.5rem;
+}
+
+.link_descarga p{
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .boton:hover {
     background-color: var(--color--cabezera);
 }
@@ -236,7 +282,6 @@ header.active {
 
 .contratos:hover {
     background-color: var(--bg--cabezera--hover);
-    transform: scale(1.1);
 }
 
 .contratos img {
@@ -293,16 +338,6 @@ header.active {
     100% {
         background-color: transparent;
     }
-}
-
-
-.qr{
-    width: 200px;
-    height: 200px;
-}
-
-.qr img{
-    width: 100%;
 }
 
 /* LOADER */
