@@ -29,11 +29,33 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-thumb {
     border-radius: 20px;
-    background: rgb(255,0,0);
-    background: -moz-linear-gradient(180deg, rgba(255,0,0,1) 0%, rgba(255,76,125,1) 50%, rgba(255,0,0,1) 100%);
-    background: -webkit-linear-gradient(180deg, rgba(255,0,0,1) 0%, rgba(255,76,125,1) 50%, rgba(255,0,0,1) 100%);
-    background: linear-gradient(180deg, rgba(255,0,0,1) 0%, rgba(255,76,125,1) 50%, rgba(255,0,0,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff0000",endColorstr="#ff0000",GradientType=1);
+    background: rgb(255, 0, 0);
+    background: -moz-linear-gradient(180deg, rgba(255, 0, 0, 1) 0%, rgba(255, 76, 125, 1) 50%, rgba(255, 0, 0, 1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(255, 0, 0, 1) 0%, rgba(255, 76, 125, 1) 50%, rgba(255, 0, 0, 1) 100%);
+    background: linear-gradient(180deg, rgba(255, 0, 0, 1) 0%, rgba(255, 76, 125, 1) 50%, rgba(255, 0, 0, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff0000", endColorstr="#ff0000", GradientType=1);
+}
+
+
+/* Oculta el contenido hasta que el loader desaparezca */
+body.loading section,
+body.loading header,
+body.loading .circle {
+    visibility: hidden;
+}
+
+/* Desactiva el scroll en el cuerpo mientras el loader está activo */
+body.loading {
+    overflow: hidden;
+}
+
+/* Transición suave para el contenido */
+body:not(.loading) section,
+body:not(.loading) header,
+body:not(.loading) .circle {
+    opacity: 1;
+    transition: opacity 2s ease-in-out;
+    visibility: visible;
 }
 
 .circle {
@@ -78,7 +100,7 @@ header.active {
     width: 8%;
 }
 
-.select{
+.select {
     cursor: pointer;
 }
 
@@ -88,7 +110,7 @@ header.active {
     z-index: 1;
 }
 
-.boton{
+.boton {
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
@@ -96,15 +118,15 @@ header.active {
     border: none;
 }
 
-.boton:hover{
+.boton:hover {
     background-color: var(--color--cabezera);
 }
 
-.seleccionar{
+.seleccionar {
     display: none;
 }
 
-.seleccionar.active{
+.seleccionar.active {
     display: block;
     position: fixed;
     top: 5rem;
@@ -115,11 +137,11 @@ header.active {
     border-radius: 10px;
 }
 
-.seleccionar div i{
+.seleccionar div i {
     color: var(--color--cabezera);
 }
 
-.seleccionar div a{
+.seleccionar div a {
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -130,12 +152,12 @@ header.active {
     font-weight: 600;
 }
 
-.seleccionar div{
+.seleccionar div {
     padding: 0px 10px 0px 10px;
     border-radius: 5px;
 }
 
-.seleccionar div:hover{
+.seleccionar div:hover {
     background-color: var(--bg--cabezera);
 }
 
@@ -212,7 +234,7 @@ header.active {
     cursor: pointer;
 }
 
-.contratos:hover{
+.contratos:hover {
     background-color: var(--bg--cabezera--hover);
     transform: scale(1.1);
 }
@@ -221,7 +243,7 @@ header.active {
     width: 15%;
 }
 
-.contratos a{
+.contratos a {
     font-size: .8rem;
     text-decoration: none;
 }
@@ -233,38 +255,265 @@ header.active {
     color: var(--bg--cuerpo--dos);
 }
 
-.contacto {
-    width: 100%;
-    color: var(--bg--cabezera);
-    margin-top: 2rem;
-}
-
-.contacto .uno {
-    font-size: .7rem;
-    font-weight: 700;
-    margin-top: 1rem;
-}
-
-.contacto .dos {
-    margin-top: 2rem;
-    font-size: 1rem;
-    font-weight: 700;
-}
-
-.redes i {
-    font-size: 1.7rem;
-    margin-left: 1rem;
+/* works only on a dark background with these paremeters*/
+.button {
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    place-items: center;
+    background-color: transparent;
     cursor: pointer;
-    z-index: 5;
-    transition: ease-in-out;
 }
 
-.logo_footer {
-    width: 15%;
+.button>svg {
+    border-radius: inherit;
+    padding: 0.5rem;
+    fill: #000000;
+    /* SVG color */
+    width: 38px;
+    /* default width 32px */
+    height: 38px;
+    /* default height 32px */
 }
 
-.logo_footer img {
+.button>svg:active {
+    background-color: rgba(65, 65, 65, 0.5);
+}
+
+.button>svg:not(:active) {
+    animation: fadeOut 0.9s;
+}
+
+@keyframes fadeOut {
+    0% {
+        outline: 1px solid rgba(90, 90, 90, 0.5);
+        /* If you use border it will take space inside and slightly move the SVG */
+    }
+
+    100% {
+        background-color: transparent;
+    }
+}
+
+
+.qr{
+    width: 200px;
+    height: 200px;
+}
+
+.qr img{
     width: 100%;
+}
+
+/* LOADER */
+
+.contnt_loader {
+    background-color: var(--bg--cabezera);
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.loaders {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cssload-container * {
+    box-sizing: border-box;
+}
+
+.cssload-container {
+    margin: 38px auto 0 auto;
+    max-width: 1048px;
+}
+
+.cssload-container ul li {
+    list-style: none;
+}
+
+.cssload-flex-container {
+    display: flex;
+    display: -o-flex;
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.cssload-flex-container li {
+    padding: 19px;
+    height: 188px;
+    width: 188px;
+    margin: 56px 38px;
+    position: relative;
+    text-align: center;
+}
+
+.cssload-loading-center {
+    display: inline-block;
+    position: absolute;
+    /* The color can be custmized, This color is for center cube.*/
+    background: #ff0000;
+    height: 56px;
+    width: 56px;
+    left: 68px;
+    top: 69px;
+    transform: rotate(45deg);
+    border-radius: 6px;
+    animation: pulse 1.3s ease infinite;
+}
+
+.cssload-loading {
+    display: inline-block;
+    position: relative;
+    width: 141px;
+    height: 141px;
+    margin-top: 6px;
+    transform: rotate(45deg);
+}
+
+.cssload-loading:after,
+.cssload-loading:before {
+    position: absolute;
+    content: '';
+    height: 19px;
+    width: 19px;
+    display: block;
+    top: 0;
+    /* The color can be custmized, This color is for 4 cubes.*/
+    background: #ff5252;
+    border-radius: 6px;
+}
+
+.cssload-loading:after {
+    right: 0;
+    animation: square-tr 2.6s ease infinite;
+    animation-delay: .162.5s;
+}
+
+.cssload-loading:before {
+    animation: square-tl 2.6s ease infinite;
+    animation-delay: .162.5s;
+}
+
+.cssload-loading.cssload-two {
+    position: relative;
+    top: -150px;
+}
+
+.cssload-loading.cssload-two:after,
+.cssload-loading.cssload-two:before {
+    bottom: 0;
+    top: initial;
+}
+
+.cssload-loading.cssload-two:after {
+    animation: square-br 2.6s ease infinite;
+    animation-direction: reverse;
+}
+
+.cssload-loading.cssload-two:before {
+    animation: square-bl 2.6s ease infinite;
+    animation-direction: reverse;
+}
+
+@keyframes square-tl {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(0, 117.5px);
+    }
+
+    50% {
+        transform: translate(117.5px, 117.5px);
+    }
+
+    75% {
+        transform: translate(117.5px, 0);
+    }
+}
+
+@keyframes square-bl {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(0, -117.5px);
+    }
+
+    50% {
+        transform: translate(117.5px, -117.5px);
+    }
+
+    75% {
+        transform: translate(117.5px, 0);
+    }
+}
+
+@keyframes square-tr {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(-117.5px, 0);
+    }
+
+    50% {
+        transform: translate(-117.5px, 117.5px);
+    }
+
+    75% {
+        transform: translate(0, 117.5px);
+    }
+}
+
+@keyframes square-br {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(-117.5px, 0);
+    }
+
+    50% {
+        transform: translate(-117.5px, -117.5px);
+    }
+
+    75% {
+        transform: translate(0, -117.5px);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(inherit) rotate(45deg);
+    }
+
+    75% {
+        transform: scale(0.25) rotate(45deg);
+    }
 }
 
 
@@ -394,15 +643,15 @@ header.active {
 }
 
 @media (max-width: 450px) {
-    .seleccionar div i{
+    .seleccionar div i {
         font-size: 1.5rem;
     }
 
-    .seleccionar div a{
+    .seleccionar div a {
         font-size: .8rem;
     }
 
-    .logo.active{
+    .logo.active {
         width: 28%;
     }
 
@@ -431,7 +680,8 @@ header.active {
         font-size: .75rem;
     }
 
-    .contacto h6, p{
+    .contacto h6,
+    p {
         text-align: center;
         width: 100%;
     }
