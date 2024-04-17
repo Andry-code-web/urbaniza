@@ -49,6 +49,10 @@ body.loading {
     overflow: hidden;
 }
 
+body.active-scroll-lock {
+    overflow: hidden;
+}
+
 /* Transición suave para el contenido */
 body:not(.loading) section,
 body:not(.loading) header,
@@ -118,24 +122,38 @@ header.active {
     border: none;
 }
 
-.carta{
-    display: none;
+/* TARJETA */
+.fodo_tarjeta.active {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.493);
+    z-index: 1; 
 }
 
-.carta.active{
+.carta.active {
+    display: block;
     max-width: 340px;
-    height: 550px;
+    height: 600px;
     background: var(--bg--cabezera);
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: block;
-    z-index: 1;
-    padding: 2.5rem 1rem 1rem 1.5rem;
+    border-radius: 16px;
+    padding: 1rem;
+    z-index: 2;
 }
 
-.cerrar{
+.carta,
+.fodo_tarjeta {
+    display: none;
+}
+
+.cerrar {
     position: absolute;
     right: 1rem;
     top: 1rem;
@@ -144,26 +162,135 @@ header.active {
     cursor: pointer;
 }
 
-.cerrar i{
+.cerrar i {
     font-size: 1.1rem;
 }
 
-.link_descarga{
+.link_descarga {
     width: 100%;
 }
 
-.link_descarga h3{
-    width: 50%;
-    font-size: 1.5rem;
+.link_descarga h3 {
+    width: 60%;
+    font-size: 1.4rem;
 }
 
-.link_descarga p{
+.link_descarga p {
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
+.enlace {
+    width: 100%;
+    height: 4vh;
+    background-color: #f1f1f1;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 5px;
+}
+
+.enlace a i {
+    color: #000;
+    font-size: 1.2rem;
+}
+
+.redes_s {
+    width: 100%;
+    height: 5vh;
+    margin-top: .5rem;
+}
+
+.redes {
+    gap: 1.4rem;
+}
+
+.redes a {
+    text-decoration: none;
+}
+
+.redes i {
+    font-size: 1.5rem;
+}
+
+.redes a:nth-last-child(7) i {
+    color: #4285F4;
+}
+
+.redes a:nth-last-child(6) i {
+    width: 23px;
+    height: 23px;
+    background: #000;
+    color: #fff;
+    border-radius: 50%;
+    font-size: .8rem;
+    padding-top: 3px;
+}
+
+.redes a:nth-last-child(5) i {
+    width: 23px;
+    height: 23px;
+    background: #49a12e;
+    color: #fff;
+    border-radius: 50%;
+    font-size: .8rem;
+    padding-top: 3px;
+}
+
+.redes a:nth-last-child(4) i {
+    color: #279FDA;
+}
+
+.redes a:nth-last-child(3) i {
+    color: #006699;
+}
+
+.redes a:nth-last-child(2) i {
+    background: rgb(0, 98, 255);
+    background: linear-gradient(45deg, rgba(0, 98, 255, 1) 0%, rgba(255, 0, 134, 1) 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.redes a:nth-last-child(1) i {
+    color: #222D65;
+}
+
+.separador {
+    width: 100%;
+    border-top: rgb(139, 139, 139) solid 1px;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.qr {
+    width: 100%;
+    height: 45%;
+    background-color: #f1f1f1;
+}
+
+.img_qr {
+    width: 55%;
+    height: 70%;
+    background-color: #000;
+}
+
+.descargar_doc {
+    width: 85%;
+    height: 5vh;
+    border: solid var(--bg--cuerpo--uno) 2px;
+    margin-top: 2rem;
+    border-radius: 10px;
+}
+
+.descargar_doc a {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--bg--cuerpo--dos);
+}
+
+/* CUERPO */
 .boton:hover {
     background-color: var(--color--cabezera);
 }
@@ -271,9 +398,9 @@ header.active {
 .contratos {
     text-align: center;
     padding: 0px 1rem 0 1rem;
-    gap: 1.5rem;
+    gap: 4rem;
     width: 30%;
-    height: 7vh;
+    height: 7.2vh;
     background-color: var(--bg--cabezera);
     border-radius: 1rem;
     transition: all .3s;
@@ -300,7 +427,8 @@ header.active {
     color: var(--bg--cuerpo--dos);
 }
 
-/* works only on a dark background with these paremeters*/
+/* BOTON CAMBiO */
+
 .button {
     border-radius: 50%;
     border: none;
@@ -552,6 +680,7 @@ header.active {
 }
 
 
+/* MEDIAS */
 @media (max-width: 1500px) {
     .content_links h5 {
         width: 20%;

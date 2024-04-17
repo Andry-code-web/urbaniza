@@ -204,7 +204,7 @@ header.active {
     padding: 0px 1rem 0 1rem;
     gap: 6rem;
     width: 30%;
-    height: 6vh;
+    height: 7vh;
     background-color: var(--bg--cabezera);
     border-radius: 2rem;
     transition: all .3s;

@@ -93,43 +93,63 @@
         <!-- CONTENIDO -->
         <div class="cuerpo_links d-flex flex-column justify-content-center mb-5">
 
+            <!-- FONDO ESTATICO -->
+            <div class="fodo_tarjeta" id="fondo"></div>
+            <!-- TARJETA -->
             <div class="carta" id="cards">
                 <button id="cloced" class="cerrar">
                     <i class="bi bi-x-lg"></i>
                 </button>
                 <div class="link_descarga d-flex flex-column align-items-center">
-                    <h3>Comparte este enlace</h3>
-                    <p>VENTA DE INMUEBLE CON EXCLUSIVIDAD ÚNICO PROPIETARIO</p>
-                    <div class="enlace">
+                    <h3 class="text-center">Comparte este enlace</h3>
+                    <p id="parafo_text"></p>
+                    <div class="enlace d-flex align-items-center">
                         <p></p>
                         <a href="">
                             <i class="bi bi-copy"></i>
                         </a>
                     </div>
                 </div>
-                <div class="redes_s">
-                    <div class="redes">
-                        <i class="bi bi-facebook"></i>
-                        <i class="bi bi-instagram"></i>
-                        <i class="bi bi-whatsapp"></i>
-                        <i class="bi bi-tiktok"></i>
-                        <i class="bi bi-globe2"></i>
-                        <i class="bi bi-youtube"></i>
-                        <i class="bi bi-linkedin"></i>
-                        <i class="bi bi-twitter-x"></i>
-                        <i class="bi bi-telephone-fill"></i>
-                        <i class="bi bi-envelope"></i>
+                <div class="redes_s d-flex align-items-center justify-content-center">
+
+                    <div class="redes d-flex justify-content-around align-items-center">
+                        <a href="">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="">
+                            <i class="bi bi-twitter-x d-flex align-items-center justify-content-center"></i>
+                        </a>
+                        <a href="">
+                            <i class="bi bi-whatsapp d-flex align-items-center justify-content-center"></i>
+                        </a>
+                        <a href="">
+                            <i class="bi bi-telegram"></i>
+                        </a>
+                        <a href="">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                        <a href="">
+                            <i class="bi bi-messenger"></i>
+                        </a>
+                        <a href="">
+                            <i class="bi bi-envelope-fill"></i>
+                        </a>
                     </div>
                 </div>
                 <div class="separador"></div>
-                <div class="qr" id="qrCode">
-                    <div class="img_qr"></div>
-                    <div class="descargar_doc">
-                        Descargar documento
+                <div class="qr d-flex align-items-center justify-content-center" id="qrCode">
+                    <div class="img_qr "></div>
+                </div>
+                <div style="width: 100%; height: 5vh;" class="d-flex justify-content-center align-items-center">
+                    <div class="descargar_doc d-flex justify-content-center align-items-center">
+                        <a href="">
+                            Descargar documento
+                        </a>
                     </div>
                 </div>
             </div>
 
+            <!-- LINKS -->
             <div class="content_links d-flex flex-column justify-content-center align-items-center">
                 <h5>
                     CONTRATO DE INTERMEDIACIÓN
@@ -138,10 +158,10 @@
                     <img src="/img/logo.png" alt="">
                     <a id="documento"
                         href="/img/CONTRATO DE INTERMEDIACIÓN INMOBILIARIA PARA VENTA DE INMUEBLE CON EXCLUSIVIDAD - ÚNICO PROPIETARIO (2).docx">
-                        <p>VENTA DE INMUEBLE CON EXCLUSIVIDAD ÚNICO PROPIETARIO</p>
+                        <p class="texto_copy">VENTA DE INMUEBLE CON EXCLUSIVIDAD ÚNICO PROPIETARIO</p>
                     </a>
                     <div class="card_file">
-                        <button class="button" id="boton_card">
+                        <button class="button button1" onclick="pres_btn(event);" id="boton_card1">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-three-dots" viewBox="0 0 16 16">
                                 <path
@@ -149,50 +169,17 @@
                             </svg>
                         </button>
                     </div>
-                    <div class="carta" id="cards">
-                        <div class="link_descarga">
-                            <h3>Comparte este enlace</h3>
-                            <p>VENTA DE INMUEBLE CON EXCLUSIVIDAD ÚNICO PROPIETARIO</p>
-                            <div class="enlace">
-                                <p></p>
-                                <a href="">
-                                    <i class="bi bi-copy"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="redes_s">
-                            <div class="redes">
-                                <i class="bi bi-facebook"></i>
-                                <i class="bi bi-instagram"></i>
-                                <i class="bi bi-whatsapp"></i>
-                                <i class="bi bi-tiktok"></i>
-                                <i class="bi bi-globe2"></i>
-                                <i class="bi bi-youtube"></i>
-                                <i class="bi bi-linkedin"></i>
-                                <i class="bi bi-twitter-x"></i>
-                                <i class="bi bi-telephone-fill"></i>
-                                <i class="bi bi-envelope"></i>
-                            </div>
-                        </div>
-                        <div class="separador"></div>
-                        <div class="qr" id="qrCode">
-                            <div class="img_qr"></div>
-                            <div class="descargar_doc">
-                                Descargar documento
-                            </div>
-                        </div>
-                    </div>
                 </div>
-
-                <div class="contratos d-flex align-items-center mt-3">
+                
+                <div class="contratos d-flex justify-content-around align-items-center mt-3">
                     <img src="/img/logo.png" alt="">
-                    <a href="https://www.vivehg.com/contratosvivehg/">
-                        <p>
+                    <a href="">
+                        <p class="texto_capy1">
                             VENTA DE INMUEBLES SIN EXCLUSIVIDAD ÚNICO PROPIETARIO
                         </p>
                     </a>
                     <div class="card_file">
-                        <button class="button">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-three-dots" viewBox="0 0 16 16">
                                 <path
@@ -207,21 +194,39 @@
                 <h5>
                     BÚSQUEDA DE PROPIEDAD
                 </h5>
-                <div class="contratos d-flex align-items-center">
+                <div class="contratos d-flex justify-content-around align-items-center">
                     <img src="/img/logo.png" alt="">
                     <a href="https://drive.google.com/drive/folders/1GC3B30o56RkLnNNVENvchVoqBHlqq4KD">
                         <p>
                             BÚSQUEDA DE INMUEBLES CON EXCLUSIVIDAD
                         </p>
                     </a>
+                    <div class="card_file">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
-                <div class="contratos d-flex align-items-center mt-3">
+                <div class="contratos d-flex justify-content-around align-items-center mt-3">
                     <img src="/img/logo.png" alt="">
                     <a href="https://drive.google.com/drive/folders/1GC3B30o56RkLnNNVENvchVoqBHlqq4KD">
                         <p>
                             BÚSQUEDA DE INMUEBLES SIN EXCLUSIVIDAD
                         </p>
                     </a>
+                    <div class="card_file">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -229,13 +234,22 @@
                 <h5>
                     SOCIEDAD CONYUGAL
                 </h5>
-                <div class="contratos d-flex align-items-center">
+                <div class="contratos d-flex  align-items-center">
                     <img src="/img/logo.png" alt="">
                     <a href="https://www.vivehg.com/videos-vivehg/">
                         <p>
                             VENTA DE INMUEBLES SOCIEDAD CONYUGAL CON EXCLUSIVIDAD
                         </p>
                     </a>
+                    <div class="card_file">
+                        <button class="button" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
                 <div class="contratos d-flex align-items-center mt-3">
                     <img src="/img/logo.png" alt="">
@@ -244,6 +258,15 @@
                             VENTA DE INMUEBLES SOCIEDAD CONYUGAL SIN EXCLUSIVIDAD
                         </p>
                     </a>
+                    <div class="card_file">
+                        <button class="button" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -258,7 +281,15 @@
                             REPARTO DE COMISIÓN ENTRE ASESORES VIVEHG UN INMUEBLE
                         </p>
                     </a>
-
+                    <div class="card_file">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -273,6 +304,15 @@
                             PROPIEDAD OTORGADA EN ARRENDAMIENTO CON EXCLUSIVIDAD
                         </p>
                     </a>
+                    <div class="card_file">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
                 <div class="contratos d-flex align-items-center mt-3">
                     <img src="/img/logo.png" alt="">
@@ -281,6 +321,15 @@
                             PROPIEDAD OTORGADA EN ARRENDAMIENTO SIN EXCLUSIVIDAD
                         </p>
                     </a>
+                    <div class="card_file">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -295,7 +344,15 @@
                             CON SUCESIÓN INTESTADA Y CON EXCLUSIVIDAD
                         </p>
                     </a>
-
+                    <div class="card_file">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
                 <div class="contratos d-flex align-items-center mt-3">
                     <img src="/img/logo.png" alt="">
@@ -304,7 +361,15 @@
                             CON SUCESIÓN INTESTADA Y SIN EXCLUSIVIDAD
                         </p>
                     </a>
-
+                    <div class="card_file">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -319,6 +384,15 @@
                             CON COMISIONES SOBRE EL PRECIO DE VENTA Y CON EXCLUSIVIDAD
                         </p>
                     </a>
+                    <div class="card_file">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
                 <div class="contratos d-flex align-items-center mt-3">
                     <img src="/img/logo.png" alt="">
@@ -327,6 +401,15 @@
                             CON COMISION DE MONTO FIJO Y SIN EXCLUSIVIDAD
                         </p>
                     </a>
+                    <div class="card_file">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
                 <div class="contratos d-flex align-items-center mt-3">
                     <img src="/img/logo.png" alt="">
@@ -335,6 +418,15 @@
                             CON COMISION DE MONTO FIJO Y CON EXCLUSIVIDAD
                         </p>
                     </a>
+                    <div class="card_file">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
                 <div class="contratos d-flex align-items-center mt-3">
                     <img src="/img/logo.png" alt="">
@@ -343,6 +435,15 @@
                             CON COMISION SOBRE EL PRECIO DE VENTA Y SIN EXCLUSIVIDAD
                         </p>
                     </a>
+                    <div class="card_file">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
                 <div class="contratos d-flex align-items-center mt-3">
                     <img src="/img/logo.png" alt="">
@@ -351,6 +452,15 @@
                             CON COMISION POR PORCENTAJE Y POR ARRAS
                         </p>
                     </a>
+                    <div class="card_file">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
 
             </div>
@@ -367,6 +477,15 @@
                             CON EXCLUSIVIDAD CON RESPECTO A OTROS AGENTES Y SIN EXCLUSIVIDAD CON RESPECTO AL PROPIETARIO
                         </p>
                     </a>
+                    <div class="card_file">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
                 <div class="contratos d-flex align-items-center mt-3">
                     <img src="/img/logo.png" alt="">
@@ -376,6 +495,15 @@
                             CON EMPRESA CONSTRUCTORA
                         </p>
                     </a>
+                    <div class="card_file">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
                 <div class="contratos d-flex align-items-center mt-3">
                     <img src="/img/logo.png" alt="">
@@ -385,7 +513,15 @@
                             VENTA DE INMUEBLES CON REPRESENTACIÓN DE SUCESIÓN INTESTADA
                         </p>
                     </a>
-
+                    <div class="card_file">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
                 <div class="contratos d-flex align-items-center mt-3">
                     <img src="/img/logo.png" alt="">
@@ -395,6 +531,15 @@
                             CON EMPRESA DESARROLLADORA Y CON PAGO EN ESPECIE
                         </p>
                     </a>
+                    <div class="card_file">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -409,7 +554,15 @@
                             VENTA DE INMUEBLES EN COPROPIEDAD
                         </p>
                     </a>
-
+                    <div class="card_file">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
                 <div class="contratos d-flex align-items-center mt-3">
                     <img src="/img/logo.png" alt="">
@@ -418,7 +571,15 @@
                             EN REPRESENTACIÓN DE COPROPIETARIOS
                         </p>
                     </a>
-
+                    <div class="card_file">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -433,6 +594,15 @@
                             CONTRATO DE ARRENDAMIENTO DE INMUEBLE CON OPCIÓN DE COMPRA
                         </p>
                     </a>
+                    <div class="card_file">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
 
                 </div>
                 <div class="contratos d-flex align-items-center mt-3">
@@ -442,6 +612,15 @@
                             CONTRATO DE ARRENDAMIENTO DE INMUEBLE CON PACTO DE RESOLUCIÓN UNILATERAL
                         </p>
                     </a>
+                    <div class="card_file">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
 
                 </div>
                 <div class="contratos d-flex align-items-center mt-3">
@@ -451,6 +630,15 @@
                             CONTRATO DE ARRENDAMIENTO DE LOCAL COMERCIAL CON PERMISO PARA SUBARRENDAR
                         </p>
                     </a>
+                    <div class="card_file">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
 
                 </div>
                 <div class="contratos d-flex align-items-center mt-3">
@@ -460,7 +648,15 @@
                             CONTRATO DE ARRENDAMIENTO DE LOCAL COMERCIAL
                         </p>
                     </a>
-
+                    <div class="card_file">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
                 <div class="contratos d-flex align-items-center mt-3">
                     <img src="/img/logo.png" alt="">
@@ -469,7 +665,15 @@
                             CONTRATO DE ARRENDAMIENTO DE OFICINA ADMINISTRATIVA
                         </p>
                     </a>
-
+                    <div class="card_file">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
                 <div class="contratos d-flex align-items-center mt-3">
                     <img src="/img/logo.png" alt="">
@@ -478,6 +682,15 @@
                             CONTRATO DE ARRENDAMIENTO DE TERRENO PARA ESTACIONAMIENTO DE VEHÍCULOS
                         </p>
                     </a>
+                    <div class="card_file">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
                 <div class="contratos d-flex align-items-center mt-3">
                     <img src="/img/logo.png" alt="">
@@ -486,6 +699,15 @@
                             CONTRATO DE ARRENDAMIENTO DE UN DEPARTAMENTO
                         </p>
                     </a>
+                    <div class="card_file">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
                 <div class="contratos d-flex align-items-center mt-3">
                     <img src="/img/logo.png" alt="">
@@ -495,6 +717,15 @@
                             LEY 30933
                         </p>
                     </a>
+                    <div class="card_file">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
                 <div class="contratos d-flex align-items-center mt-3">
                     <img src="/img/logo.png" alt="">
@@ -503,6 +734,15 @@
                             CONTRATO DE ARRENDAMIENTO DE UN ESTACIONAMIENTO UBICADO EN EL EDIFICIO
                         </p>
                     </a>
+                    <div class="card_file">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
                 <div class="contratos d-flex align-items-center mt-3">
                     <img src="/img/logo.png" alt="">
@@ -511,6 +751,15 @@
                             CONTRATO DE ARRENDAMIENTO DE UNA HABITACIÓN CON DERECHO DE RETENCIÓN
                         </p>
                     </a>
+                    <div class="card_file">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
                 <div class="contratos d-flex align-items-center mt-3">
                     <img src="/img/logo.png" alt="">
@@ -519,6 +768,15 @@
                             CONTRATO DE CESIÓN DE POSICIÓN CONTRACTUAL DE UN ARRENDAMIENTO
                         </p>
                     </a>
+                    <div class="card_file">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
                 <div class="contratos d-flex align-items-center mt-3">
                     <img src="/img/logo.png" alt="">
@@ -527,6 +785,15 @@
                             CONTRATO DE ARRENDAMIENTO DE AIRE CON POSTERIOR CONSTRUCCIÓN
                         </p>
                     </a>
+                    <div class="card_file">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -541,7 +808,15 @@
                             CONTRATO DE HOSPEDAJE
                         </p>
                     </a>
-
+                    <div class="card_file">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -557,7 +832,15 @@
                             CONTRATO DE SUBARRENDAMIENTO DE HABITACIÓN
                         </p>
                     </a>
-
+                    <div class="card_file">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
                 <div class="contratos d-flex align-items-center mt-3">
                     <img src="/img/logo.png" alt="">
@@ -567,7 +850,15 @@
                             CONTRATO DE SUBARRENDAMIENTO DE BIEN INMUEBLE
                         </p>
                     </a>
-
+                    <div class="card_file">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -582,7 +873,15 @@
                             MINUTA DE COMPRAVENTA DE BIEN INMUEBLE HIPOTECADO
                         </p>
                     </a>
-
+                    <div class="card_file">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
                 <div class="contratos d-flex align-items-center mt-3">
                     <img src="/img/logo.png" alt="">
@@ -591,7 +890,15 @@
                             MINUTA DE COMPRAVENTA DE AIRES SIN INDEPENDIZAR
                         </p>
                     </a>
-
+                    <div class="card_file">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
                 <div class="contratos d-flex align-items-center mt-3">
                     <img src="/img/logo.png" alt="">
@@ -600,7 +907,15 @@
                             MINUTA DE COMPRAVENTA DE BIEN INMUEBLE EN LITIGIO
                         </p>
                     </a>
-
+                    <div class="card_file">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
                 <div class="contratos d-flex align-items-center mt-3">
                     <img src="/img/logo.png" alt="">
@@ -609,7 +924,15 @@
                             MINUTA DE COMPRAVENTA DE BIEN INMUEBLE
                         </p>
                     </a>
-
+                    <div class="card_file">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
                 <div class="contratos d-flex align-items-center mt-3">
                     <img src="/img/logo.png" alt="">
@@ -618,7 +941,15 @@
                             MINUTA DE COMPRAVENTA DE BIEN FUTURO
                         </p>
                     </a>
-
+                    <div class="card_file">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
                 <div class="contratos d-flex align-items-center mt-3">
                     <img src="/img/logo.png" alt="">
@@ -627,6 +958,15 @@
                             MINUTA DE COMPRAVENTA DE DEPARTAMENTO
                         </p>
                     </a>
+                    <div class="card_file">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
                 <div class="contratos d-flex align-items-center mt-3">
                     <img src="/img/logo.png" alt="">
@@ -636,6 +976,15 @@
                             MINUTA DE COMPRAVENTA DE BIEN FUTURO CON SANEAMIENTO POR VICIOS OCULTOS
                         </p>
                     </a>
+                    <div class="card_file">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
                 <div class="contratos d-flex align-items-center mt-3">
                     <img src="/img/logo.png" alt="">
@@ -644,6 +993,15 @@
                             MINUTA DE COMPRAVENTA DE DEPARTAMENTO CON RESERVA VITALICIA DE USUFRUCTO
                         </p>
                     </a>
+                    <div class="card_file">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
                 <div class="contratos d-flex align-items-center mt-3">
                     <img src="/img/logo.png" alt="">
@@ -652,6 +1010,15 @@
                             MINUTA DE COMPRAVENTA DE COOPERATIVA CON ASOCIADO
                         </p>
                     </a>
+                    <div class="card_file">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
                 <div class="contratos d-flex align-items-center mt-3">
                     <img src="/img/logo.png" alt="">
@@ -660,6 +1027,15 @@
                             MINUTA DE COMPRAVENTA DE BIEN INMUEBLE DE MENOR DE EDAD
                         </p>
                     </a>
+                    <div class="card_file">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
                 <div class="contratos d-flex align-items-center mt-3">
                     <img src="/img/logo.png" alt="">
@@ -668,6 +1044,15 @@
                             MINUTA DE COMPRAVENTA DE BIEN INMUEBLE OTORGADO EN CESIÓN DE PAGO
                         </p>
                     </a>
+                    <div class="card_file">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
                 <div class="contratos d-flex align-items-center mt-3">
                     <img src="/img/logo.png" alt="">
@@ -676,6 +1061,15 @@
                             MINUTA DE COMPRAVENTA DE BIEN INMUEBLE CON PAGO EN DINERO Y EN BIEN MUEBLE
                         </p>
                     </a>
+                    <div class="card_file">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
                 <div class="contratos d-flex align-items-center mt-3">
                     <img src="/img/logo.png" alt="">
@@ -684,6 +1078,15 @@
                             MINUTA DE COMPRAVENTA DE BIEN INMUEBLE DE MAYOR INCAPAZ
                         </p>
                     </a>
+                    <div class="card_file">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -699,6 +1102,15 @@
                             ORDEN DE VISITA DE CLIENTE COMPRADOR
                         </p>
                     </a>
+                    <div class="card_file">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -714,7 +1126,15 @@
                             CONTRATO PREPARATORIO DE OPCIÓN DE COMPRA
                         </p>
                     </a>
-
+                    <div class="card_file">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
                 <div class="contratos d-flex align-items-center mt-3">
                     <img src="/img/logo.png" alt="">
@@ -724,7 +1144,15 @@
                             COMPROMISO DE COMPRAVENTA CON ARRAS
                         </p>
                     </a>
-
+                    <div class="card_file">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
                 <div class="contratos d-flex align-items-center mt-3">
                     <img src="/img/logo.png" alt="">
@@ -734,7 +1162,15 @@
                             COMPROMISO DE COMPRAVENTA CON ARRAS Y SALDO PENDIENTE CON LETRAS DE CAMBIO
                         </p>
                     </a>
-
+                    <div class="card_file">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
                 <div class="contratos d-flex align-items-center mt-3">
                     <img src="/img/logo.png" alt="">
@@ -744,7 +1180,15 @@
                             COMPROMISO DE COMPRAVENTA A CONDICIÓN QUE SE OTORGUE EL CRÉDITO HIPOTECARIO
                         </p>
                     </a>
-
+                    <div class="card_file">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -760,7 +1204,15 @@
                             CONTRATO DE TRANSFERENCIA DE LA POSESIÓN
                         </p>
                     </a>
-
+                    <div class="card_file">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
                 <div class="contratos d-flex align-items-center mt-3">
                     <img src="/img/logo.png" alt="">
@@ -771,6 +1223,15 @@
                             EXCLUSIVIDAD
                         </p>
                     </a>
+                    <div class="card_file">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -786,6 +1247,15 @@
                             MINUTA DE COMPRAVENTA DE ACCIONES Y DERECHOS DE BIEN INMUEBLE
                         </p>
                     </a>
+                    <div class="card_file">
+                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -810,19 +1280,39 @@
     <script src="/js/script.js"></script>
     <script src="/js/loader.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const tarjeta = document.getElementById('cards');
-            const btn_card = document.getElementById('boton_card');
-            const btn_cerrar = document.getElementById('cloced');
-
-            btn_card.addEventListener("click", () => {
-                tarjeta.classList.add('active')
-            })
+        function pres_btn(event) {
+            // Encuentra los elementos específicos dentro del contenedor del botón que fue presionado
+            const tarjeta = document.querySelector('.carta');
+            const fondo_activo = document.getElementById('fondo');
+            const body = document.querySelector('body');
+    
+            // Agrega la clase 'active' a la tarjeta y al fondo
+            tarjeta.classList.add('active');
+            fondo_activo.classList.add('active');
+    
+            // Agrega la clase 'active-scroll-lock' al body para bloquear el scroll
+            body.classList.add("active-scroll-lock");
+    
+            // Encuentra el botón de cerrar dentro de la tarjeta y agrega un event listener para cerrar la tarjeta
+            const btn_cerrar = tarjeta.querySelector('.cerrar');
             btn_cerrar.addEventListener("click", () => {
-                tarjeta.classList.remove('active')
-            })
-        })
+                // Quita la clase 'active' de la tarjeta y del fondo
+                tarjeta.classList.remove('active');
+                fondo_activo.classList.remove('active');
+    
+                // Quita la clase 'active-scroll-lock' del body para permitir el scroll
+                body.classList.remove('active-scroll-lock');
+            });
+        }
+
+        function add_text() {
+            
+        }
     </script>
+    
+
+
+
 
 
 </body>
