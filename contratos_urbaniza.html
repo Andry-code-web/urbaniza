@@ -104,8 +104,8 @@
                     <h3 class="text-center">Comparte este enlace</h3>
                     <p id="parafo_text"></p>
                     <div class="enlace d-flex align-items-center">
-                        <p></p>
-                        <a href="">
+                        <p id="url_acortada"></p>
+                        <a href="#" id="copiar_url">
                             <i class="bi bi-copy"></i>
                         </a>
                     </div>
@@ -138,7 +138,7 @@
                 </div>
                 <div class="separador"></div>
                 <div class="qr d-flex align-items-center justify-content-center" id="qrCode">
-                    <div class="img_qr "></div>
+                    <div class="img_qr" id="img_qr"></div>
                 </div>
                 <div style="width: 100%; height: 5vh;" class="d-flex justify-content-center align-items-center">
                     <div class="descargar_doc d-flex justify-content-center align-items-center">
@@ -158,10 +158,10 @@
                     <img src="/img/logo.png" alt="">
                     <a id="documento"
                         href="/img/CONTRATO DE INTERMEDIACIÓN INMOBILIARIA PARA VENTA DE INMUEBLE CON EXCLUSIVIDAD - ÚNICO PROPIETARIO (2).docx">
-                        <p class="texto_copy">VENTA DE INMUEBLE CON EXCLUSIVIDAD ÚNICO PROPIETARIO</p>
+                        <p id="texto_copy_uno">VENTA DE INMUEBLE CON EXCLUSIVIDAD ÚNICO PROPIETARIO</p>
                     </a>
                     <div class="card_file">
-                        <button class="button button1" onclick="pres_btn(event);" id="boton_card1">
+                        <button class="button btn_1" onclick="pres_btn(event);" id="btn1">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-three-dots" viewBox="0 0 16 16">
                                 <path
@@ -170,16 +170,16 @@
                         </button>
                     </div>
                 </div>
-                
+
                 <div class="contratos d-flex justify-content-around align-items-center mt-3">
                     <img src="/img/logo.png" alt="">
                     <a href="">
-                        <p class="texto_capy1">
+                        <p class="texto_capy_dos">
                             VENTA DE INMUEBLES SIN EXCLUSIVIDAD ÚNICO PROPIETARIO
                         </p>
                     </a>
                     <div class="card_file">
-                        <button class="button button2" onclick="pres_btn(event);" id="boton_card2">
+                        <button class="button btn_2" onclick="pres_btn(event);" id="boton_card2">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-three-dots" viewBox="0 0 16 16">
                                 <path
@@ -803,7 +803,8 @@
                 </h5>
                 <div class="contratos d-flex align-items-center">
                     <img src="/img/logo.png" alt="">
-                    <a href="https://www.youtube.com/playlist?list=PLb6700NAGw9_vKsrazLa-TFhBEwhSs-Pc">
+                    <a id="url_generar"
+                        href="https://docs.google.com/document/d/1Y_eRVX0Jv9HPxSRiAXxWb6_TzZMSwkDV/edit">
                         <p>
                             CONTRATO DE HOSPEDAJE
                         </p>
@@ -1279,42 +1280,8 @@
     <!-- SCRIPTS -->
     <script src="/js/script.js"></script>
     <script src="/js/loader.js"></script>
-    <script>
-        function pres_btn(event) {
-            // Encuentra los elementos específicos dentro del contenedor del botón que fue presionado
-            const tarjeta = document.querySelector('.carta');
-            const fondo_activo = document.getElementById('fondo');
-            const body = document.querySelector('body');
-    
-            // Agrega la clase 'active' a la tarjeta y al fondo
-            tarjeta.classList.add('active');
-            fondo_activo.classList.add('active');
-    
-            // Agrega la clase 'active-scroll-lock' al body para bloquear el scroll
-            body.classList.add("active-scroll-lock");
-    
-            // Encuentra el botón de cerrar dentro de la tarjeta y agrega un event listener para cerrar la tarjeta
-            const btn_cerrar = tarjeta.querySelector('.cerrar');
-            btn_cerrar.addEventListener("click", () => {
-                // Quita la clase 'active' de la tarjeta y del fondo
-                tarjeta.classList.remove('active');
-                fondo_activo.classList.remove('active');
-    
-                // Quita la clase 'active-scroll-lock' del body para permitir el scroll
-                body.classList.remove('active-scroll-lock');
-            });
-        }
-
-        function add_text() {
-            
-        }
-    </script>
-    
-
-
-
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="/js/active_card.js"></script>
 </body>
 
 </html>

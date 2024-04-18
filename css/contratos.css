@@ -191,6 +191,12 @@ header.active {
     border-radius: 5px;
 }
 
+.enlace p{
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+}
+
 .enlace a i {
     color: #000;
     font-size: 1.2rem;
@@ -273,7 +279,10 @@ header.active {
 .img_qr {
     width: 55%;
     height: 70%;
-    background-color: #000;
+}
+
+.img_qr img{
+    width: 100%;
 }
 
 .descargar_doc {
