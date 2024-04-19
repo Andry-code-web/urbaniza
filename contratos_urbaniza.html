@@ -16,7 +16,10 @@
     <!-- BOOTSTRAP ICON -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-
+    <!--
+    -pendientes
+        realizar el enla se del boton de descarga de la tarjeta
+ -->
 
     <title>Centro Inmobiliario</title>
 </head>
@@ -103,8 +106,8 @@
                 <div class="link_descarga d-flex flex-column align-items-center">
                     <h3 class="text-center">Comparte este enlace</h3>
                     <p id="parafo_text"></p>
-                    <div class="enlace d-flex align-items-center">
-                        <p id="url_acortada"></p>
+                    <div class="enlace d-flex align-items-center justify-content-between">
+                        <a class="url_acor" id="url_acortada"></a>
                         <a href="#" id="copiar_url">
                             <i class="bi bi-copy"></i>
                         </a>
@@ -140,9 +143,9 @@
                 <div class="qr d-flex align-items-center justify-content-center" id="qrCode">
                     <div class="img_qr" id="img_qr"></div>
                 </div>
-                <div style="width: 100%; height: 5vh;" class="d-flex justify-content-center align-items-center">
+                <div style="width: 100%; height: 5vh;" class="d-flex justify-content-center align-items-center mt-1">
                     <div class="descargar_doc d-flex justify-content-center align-items-center">
-                        <a href="">
+                        <a id="btn_descargar" href="">
                             Descargar documento
                         </a>
                     </div>

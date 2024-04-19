@@ -78,11 +78,6 @@ function pres_btn(event) {
     } else {
         console.error("El enlace no se encontró dentro del contenedor del botón.");
     }
-    /* const url_generar = document.getElementById("url_generar");
-    const longUrl = url_generar.getAttribute("href");
-    const contenedor_qr = document.getElementById("img_qr");
-    const QR = new QRCode(contenedor_qr);//creamos una nueva instancia
-    QR.makeCode(longUrl); */
 
     /* ACORTAR URL */
     if (enlace) {
@@ -94,10 +89,12 @@ function pres_btn(event) {
         QR.makeCode(longUrl);
 
         const add_url = document.getElementById("url_acortada");
+        const btn_descargar = document.getElementById("btn_descargar");
         acortarURL(longUrl)
             .then(shortUrl => {
                 console.log("URL acortada:", shortUrl);
                 add_url.innerText = shortUrl;
+                btn_descargar.href = shortUrl;
             })
             .catch(error => {
                 console.error("Error al acortar la URL:", error);
@@ -105,16 +102,9 @@ function pres_btn(event) {
     } else {
         console.error("El enlace no se encontró dentro del contenedor del botón.");
     }
-   /*  const add_url = document.getElementById("url_acortada");
-    acortarURL(longUrl)// Acortar la URL usando la API de Bitly
-        .then(shortUrl => {
-            // Mostrar la URL acortada en la consola
-            console.log("URL acortada:", shortUrl);
-            add_url.innerText = shortUrl;
-        })
-        .catch(error => {
-            console.error("Error al acortar la URL:", error);
-        }); */
+
+
+
 }
 
 function acortarURL(longUrl) {

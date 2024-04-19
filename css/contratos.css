@@ -191,10 +191,17 @@ header.active {
     border-radius: 5px;
 }
 
-.enlace p{
+.enlace a{
     margin: 0;
     padding: 0;
     font-weight: 500;
+    text-decoration: none;
+    color: #000 ;
+    cursor: pointer;
+}
+
+.enlace a:hover{
+    color: #fc4242;
 }
 
 .enlace a i {
@@ -285,12 +292,16 @@ header.active {
     width: 100%;
 }
 
+.img_qr canvas{
+    width: 100%;
+}
+
 .descargar_doc {
     width: 85%;
     height: 5vh;
     border: solid var(--bg--cuerpo--uno) 2px;
-    margin-top: 2rem;
     border-radius: 10px;
+    margin-top: 2rem;
 }
 
 .descargar_doc a {
@@ -733,6 +744,19 @@ header.active {
     .contacto p {
         font-size: 1.4rem;
     }
+
+    .carta.active{
+        height: 650px;
+    }
+
+    .separador{
+        margin-top: .5rem;
+        margin-bottom: 1rem;
+    }
+
+    .descargar_doc{
+        margin-top: 2rem;
+    }
 }
 
 @media (max-height: 800px) {
@@ -749,6 +773,15 @@ header.active {
         width: 10%;
     }
 
+    .separador{
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .descargar_doc{
+        margin-top: 4rem;
+        height: 7vh;
+    }
 }
 
 @media (max-width: 760px) {
@@ -859,16 +892,41 @@ header.active {
         width: 100%;
     }
 
-    .redes {
-        text-align: center;
-        width: 80%;
-    }
-
-    .redes i {
-        font-size: 1.5rem;
-    }
-
     .logo_footer {
         width: 35%;
+    }
+
+    .carta.active{
+        width: 300px;
+        height: 525px;
+    }
+
+    .carta h3{
+        font-size: 1.3rem;
+    }
+
+    .carta p{
+        font-size: .85rem;
+    }
+
+    .enlace a{
+        font-size: .9rem;
+    }
+
+    .redes {
+        gap: 1rem;
+    }
+
+    .redes a i{
+        font-size: 1.3rem;
+    }
+
+    .separador{
+        margin-top: .8rem;
+        margin-bottom: 1rem;
+    }
+
+    .descargar_doc{
+        margin-top: 1rem;
     }
 }
