@@ -94,6 +94,7 @@ function pres_btn(event) {
             .then(shortUrl => {
                 console.log("URL acortada:", shortUrl);
                 add_url.innerText = shortUrl;
+                add_url.href = shortUrl;
                 btn_descargar.href = shortUrl;
             })
             .catch(error => {
