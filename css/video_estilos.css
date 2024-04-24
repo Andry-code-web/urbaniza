@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --letra-cabezera: "Nunito Sans";
+    --letra--banner: "Roboto";
+    --letra--parrafo: "Lato";
+    --letra-cabezera-color: #000;
+    --bg-cabezera-hover: #ef171e;
+    --bg--cabezera: #ffffffea;
+    --color--neuto: #fff;
+    --color--subtitle--cuerpo: #b60000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    height: 8vh;
+    background-color: var(--bg--cabezera);
+    padding-right: 8rem;
+    padding-left: 7rem;
+    font-family: var(--letra-cabezera);
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.logo {
+    width: 7%;
+}
+
+.logo img {
+    width: 100%;
+}
+
+header nav {
+    gap: 2rem;
+}
+
+header nav a {
+    text-decoration: none;
+    color: var(--letra-cabezera-color);
+    padding-top: .2rem;
+    padding-left: .3rem;
+    padding-right: .3rem;
+    font-size: 1rem;
+}
+
+header nav a:hover {
+    width: auto;
+    height: auto;
+    background-color: var(--bg-cabezera-hover);
+    color: white;
+    border-radius: 5px;
+}
+
+.contacto a {
+    color: var(--letra-cabezera-color);
+    text-decoration: none;
+    font-family: var(--letra-cabezera);
+    font-size: 1.1rem;
+}
+
+.contacto a i {
+    font-size: 1.2rem;
+    color: var(--letra-cabezera-color);
+}
+
+/* BANNER */
+.banner {
+    width: 100%;
+    height: 18vh;
+    background-image: url("/img/3.png");
+    position: absolute;
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #a701019a;
+}
+
+.content h1 {
+    color: var(--color--neuto);
+    font-family: var(--letra--banner);
+    font-weight: 600;
+}
+
+/* CURPO VIDEOS */
+
+.content_videos {
+    width: 100%;
+    height: 100vh;
+    margin-top: 12rem;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, #b41116 100%);
+}
+
+.content_videos2, .content_videos3 {
+    width: 100%;
+    height: auto;
+    padding-bottom: 2rem;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, #b41116 100%);
+}
+
+
+.encabezado_videos {
+    width: 100%;
+    height: 20vh;
+}
+
+.encabezado_videos3{
+    text-align: center;
+    width: 70%;
+    border-bottom: solid 2px var(--color--subtitle--cuerpo);
+    padding-bottom: .5rem;
+    font-family: var(--letra--banner);
+    font-weight: 600;
+    color: var(--color--subtitle--cuerpo);
+    font-size: 1.5rem;
+}
+
+.encabezado_videos h2 {
+    text-align: center;
+    width: 50%;
+    border-bottom: solid 2px var(--color--subtitle--cuerpo);
+    padding-bottom: .5rem;
+    font-family: var(--letra--banner);
+    font-weight: 600;
+    color: var(--color--subtitle--cuerpo);
+    font-size: 1.7rem;
+}
+
+.content_uno .contenedor, .content_dos .contenedor{
+    width: 70%;
+}
+
+.content_uno .encabezado_videos h2{
+    width: 60%;
+} 
+
+.content_uno .first_videos .portada1{
+    width: 40%;
+}
+
+.content_dos .first_videos .portada1{
+    width: 40%;
+}
+
+
+
+.spech_urbaniza {
+    width: 100%;
+}
+
+.contenedor {
+    width: 50%;
+}
+
+.subtitle button {
+    background: none;
+    border: none;
+    gap: .5rem;
+    color: var(--color--subtitle--cuerpo);
+    font-family: var(--letra-cabezera);
+    font-weight: 600;
+}
+
+.subtitle button span i {
+    font-size: .8rem;
+}
+
+.subtitle button span {
+    width: 1.3rem;
+    height: 1.3rem;
+    border: 2px solid var(--color--subtitle--cuerpo);
+    border-radius: 50%;
+}
+
+.cuerpo {
+    margin-top: 1rem;
+    margin-left: 10px;
+    border-left: 3px solid var(--color--subtitle--cuerpo);
+}
+
+.cuerpo p {
+    font-family: var(--letra--parrafo);
+    font-style: italic;
+    padding-left: 1rem;
+    color: #ffffff;
+}
+
+/* video {
+    width: 20%;
+} */
+
+.first_videos{
+    margin-top: 2rem;
+    width: 100%;
+    height: auto;
+    gap: 7rem;
+}
+
+.portada1, .portada2{
+    gap: 1rem;
+    width: 20%;
+}
+
+.portada1 img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.portada2 img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.portada1 button{
+    background: var(--color--neuto);
+    border: none;
+    width: 170px;
+    max-width: 190px;
+    height: 40px;
+    border-radius: 5px;
+    font-family: var(--letra--parrafo);
+    font-weight: 600;
+    color: var(--color--subtitle--cuerpo);
+}
+
+.portada2 button{
+    background: var(--color--neuto);
+    border: none;
+    width: 170px;
+    max-width: 190px;
+    height: 40px;
+    border-radius: 5px;
+    font-family: var(--letra--parrafo);
+    font-weight: 600;
+    color: var(--color--subtitle--cuerpo);
+}
