@@ -11,7 +11,11 @@
     --color--subtitle--cuerpo: #b60000;
 }
 
+<<<<<<< HEAD
 * {
+=======
+*{
+>>>>>>> 40ee4d801fe8fd79d7bd42d0112049be271caff2
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -69,6 +73,7 @@ header nav a:hover {
     font-size: 1.2rem;
     color: var(--letra-cabezera-color);
 }
+<<<<<<< HEAD
 
 
 /* TARJETAS */
@@ -210,3 +215,5 @@ h2 {
     transform: scale(1.05);
     background-color: #fc282f;
 }
+=======
+>>>>>>> 40ee4d801fe8fd79d7bd42d0112049be271caff2
