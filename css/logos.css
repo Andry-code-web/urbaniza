@@ -7,15 +7,12 @@
     --letra-cabezera-color: #000;
     --bg-cabezera-hover: #ef171e;
     --bg--cabezera: #ffffffea;
+    --bg--btn--hover: #fc282f;
     --color--neuto: #fff;
     --color--subtitle--cuerpo: #b60000;
 }
 
-<<<<<<< HEAD
 * {
-=======
-*{
->>>>>>> 40ee4d801fe8fd79d7bd42d0112049be271caff2
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -73,13 +70,12 @@ header nav a:hover {
     font-size: 1.2rem;
     color: var(--letra-cabezera-color);
 }
-<<<<<<< HEAD
-
 
 /* TARJETAS */
 .plantillas {
     width: 100%;
-    height: 100vh;
+    height: auto;
+    padding-bottom: 5rem;
 }
 
 .tarjetas {
@@ -144,7 +140,7 @@ h2 {
 .tarjeta_uno a:hover,
 .tarjeta_tres a:hover {
     transform: scale(1.05);
-    background-color: #fc282f;
+    background-color: var(--bg--btn--hover);
 }
 
 
@@ -177,7 +173,8 @@ h2 {
 /* PROMOSIONES */
 .promos{
     width: 100%;
-    height: 100vh;
+    height: auto;
+    padding-bottom: 5rem;
 }
 
 .post{
@@ -189,9 +186,10 @@ h2 {
     align-items: center;
     flex-direction: column;
 }
-
+ 
 .promocion img{
     width: 80%;
+    border-radius: 10px;
 }
 
 .promocion a{
@@ -211,9 +209,169 @@ h2 {
     text-decoration: none;
 }
 
-.promocion a:hover{
+.promocion a:hover,
+.fotos_perfil a:hover,
+.mas_tarjetas a:hover,
+.redes a:hover,
+.redes_sociales a:hover{
     transform: scale(1.05);
-    background-color: #fc282f;
+    background-color: var(--bg--btn--hover);
 }
-=======
->>>>>>> 40ee4d801fe8fd79d7bd42d0112049be271caff2
+
+/* FOTOS DE PERFIL */
+
+.perfil{
+    width: 100%;
+    height: auto;
+    padding-bottom: 5rem;
+}
+
+.fotos{
+    width: 80%;
+}
+
+.fotos_perfil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fotos_perfil img{
+    width: 80%;
+    border-radius: 10px;
+}
+
+.fotos_perfil a{
+    width: 25%;
+    height: 4vh;
+    background-color: var(--bg-cabezera-hover);
+    border-radius: 5px;
+    border: none;
+    color: #fff !important;
+    font-family: var(--letra--parrafo);
+    font-weight: 700;
+    transition: all .3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    text-decoration: none;
+}
+
+/* MAS TARJETAS */
+.tarjetas_presentacion{
+    width: 100%;
+    height: auto;
+    margin-bottom: 5rem;
+}
+
+.presentacion{
+    width: 80%;
+}
+
+.mas_tarjetas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mas_tarjetas img{
+    width: 75%;
+    border-radius: 10px;
+}
+
+.mas_tarjetas a{
+    width: 40%;
+    height: 4vh;
+    background-color: var(--bg-cabezera-hover);
+    border-radius: 5px;
+    border: none;
+    color: #fff !important;
+    font-family: var(--letra--parrafo);
+    font-weight: 700;
+    transition: all .3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    text-decoration: none;
+}
+
+/* PORTADAS REDES */
+.portada_redes{
+    width: 100%;
+    height: auto;
+    margin-bottom: 5rem;
+}
+
+.portadas{
+    width: 80%;
+}
+
+.redes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.redes img{
+    width: 70%;
+    border-radius: 10px;
+}
+
+.redes a{
+    width: 25%;
+    height: 4vh;
+    background-color: var(--bg-cabezera-hover);
+    border-radius: 5px;
+    border: none;
+    color: #fff !important;
+    font-family: var(--letra--parrafo);
+    font-weight: 700;
+    transition: all .3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    text-decoration: none;
+}
+
+/* POST REDES */
+
+.post_redes{
+    width: 100%;
+    height: auto;
+    margin-bottom: 5rem;
+}
+
+.redes_porst{
+    width: 80%;
+}
+
+.redes_porst img{
+    width: 90%;
+    border-radius: 10px;
+}
+
+.redes_sociales{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.redes_sociales a{
+    width: 40%;
+    height: 4vh;
+    background-color: var(--bg-cabezera-hover);
+    border-radius: 5px;
+    border: none;
+    color: #fff !important;
+    font-family: var(--letra--parrafo);
+    font-weight: 700;
+    transition: all .3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    text-decoration: none;
+}
